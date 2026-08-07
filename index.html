@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AIで人気動画を分析する方法｜コピペで使える3STEPガイド</title>
-<meta name="description" content="人気の動画をChatGPTに見せるだけで「なぜ伸びたのか」「次の企画」が分かる。AI初心者さんでもすぐ試せる3STEPガイドです。コピペで使えるプロンプト付き。">
+<title>AI絵本デビュー完全ガイド｜絵心も文才もいらない絵本づくり4STEP</title>
+<meta name="description" content="絵心も文才もいらない。ChatGPTと画像生成AI、Canva、Amazon KDPを使って、AI初心者さんでも絵本づくりに挑戦できる完全ガイドです。コピペで使えるプロンプト付き。">
 
 <!-- OGP（SNSでシェアされたときの表示設定） -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="AIで人気動画を分析する方法｜コピペで使える3STEPガイド">
-<meta property="og:description" content="人気の動画をChatGPTに見せるだけで「なぜ伸びたのか」「次の企画」が分かる。AI初心者さんでもすぐ試せる3STEPガイドです。">
-<meta property="og:image" content="https://mion-ai-mama.github.io/instagram-tokuten-template/assets/images/video-poster.jpg">
-<meta property="og:url" content="https://mion-ai-mama.github.io/instagram-tokuten-template/">
+<meta property="og:title" content="AI絵本デビュー完全ガイド｜絵心も文才もいらない絵本づくり4STEP">
+<meta property="og:description" content="絵心も文才もいらない。ChatGPTと画像生成AI、Canva、Amazon KDPを使って、AI初心者さんでも絵本づくりに挑戦できる完全ガイドです。">
+<meta property="og:image" content="https://mion-ai-mama.github.io/ai-ehon-debut-guide/assets/images/cta-banner.png">
+<meta property="og:url" content="https://mion-ai-mama.github.io/ai-ehon-debut-guide/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#2b8ce6">
+<meta name="theme-color" content="#d97a9e">
 
 <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
@@ -25,96 +25,147 @@
 <main id="main">
 
   <!-- ============================================================
-       1. ファーストビュー
+       1. 表紙（ファーストビュー）
   ============================================================ -->
   <section class="hero" id="hero" aria-label="ページ紹介">
     <div class="hero__inner">
+      <p class="hero__kicker">3児ママの限界夜活🌙</p>
       <p class="hero__label">AI初心者さん向け</p>
       <h1 class="hero__title">
-        AIで人気動画を<br>分析する方法
+        AI絵本デビュー<br>完全ガイド
       </h1>
       <p class="hero__subtitle">
-        コピペで使える<br>3STEPガイド
+        絵心も文才もいらない。<br>AI初心者でもわかる絵本づくり4STEP
       </p>
+      <p class="hero__tag">コピペで使えるプロンプト付き</p>
       <p class="hero__desc">
-        人気の動画をChatGPTに見せると、<br>
-        「なぜ伸びたのか」や<br>
-        「次にどんな企画を作ればいいのか」を<br>
-        初心者にも分かりやすく整理してもらえます。
+        「AIで絵本を作る」<br>
+        そう聞くと、<br>
+        「絵なんて描けない」「文章を書くのも苦手」<br>
+        「そもそも何から始めればいいの？」<br>
+        と思うかもしれません。<br><br>
+        でも今は、<br>
+        ストーリーも、イラストも、<br>
+        AIに相談しながら作れる時代です。<br><br>
+        まとまった時間が取れない日は、<br>
+        夜の短い時間を使って少しずつ進める——<br>
+        そんな作り方でも大丈夫です。<br><br>
+        このガイドでは、<br>
+        AI初心者でも迷わないように、<br>
+        絵本が完成するまでを4STEPでまとめました。
       </p>
-      <a class="btn btn--primary btn--large" href="#step1" data-scroll>
-        3STEPを見てみる
+      <a class="btn btn--primary btn--large" href="#step-overview" data-scroll>
+        4STEPを見てみる
       </a>
     </div>
   </section>
 
   <!-- ============================================================
-       実例動画セクション
+       目次
   ============================================================ -->
-  <section class="section" id="example-video" aria-labelledby="example-video-heading">
+  <section class="section toc" id="toc" aria-labelledby="toc-heading">
     <div class="section__inner reveal">
-      <h2 class="section__heading" id="example-video-heading">実際に作った動画はこちら</h2>
-      <div class="video-card">
-        <video
-          id="example-video-player"
-          class="video-card__player"
-          controls
-          preload="none"
-          playsinline
-          poster="assets/images/video-poster.jpg"
-          aria-label="AIで動画分析を行い制作した実例動画">
-          <source src="assets/videos/example.mp4" type="video/mp4">
-          <p class="video-card__fallback">
-            動画を読み込めませんでした。ブラウザや通信環境をご確認いただくか、時間をおいて再度お試しください。
-          </p>
-        </video>
-        <p class="video-card__caption">
-          この動画は、<br>
-          人気動画の構成や見せ方をAIで分析し、<br>
-          その結果を参考に作成した実例です。<br><br>
-          元の動画をそのまま真似するのではなく、<br>
-          分析したポイントを自分の企画に応用しています。
-        </p>
+      <h2 class="section__heading" id="toc-heading">もくじ</h2>
+      <ul class="toc__list">
+        <li class="toc__item"><a class="toc__link" href="#intro"><span class="toc__index">1</span><span>はじめに</span></a></li>
+        <li class="toc__item"><a class="toc__link" href="#how-it-works"><span class="toc__index">2</span><span>AI絵本ってどうやって作るの？</span></a></li>
+        <li class="toc__item"><a class="toc__link" href="#amazon-examples"><span class="toc__index">3</span><span>Amazonではどんな絵本がある？</span></a></li>
+        <li class="toc__item"><a class="toc__link" href="#step-overview"><span class="toc__index">4</span><span>完成までの4STEP</span></a></li>
+        <li class="toc__item"><a class="toc__link" href="#step1"><span class="toc__index">5</span><span>STEP1｜ChatGPTでシナリオ作成</span></a></li>
+        <li class="toc__item"><a class="toc__link" href="#step2"><span class="toc__index">6</span><span>STEP2｜AIでイラスト作成</span></a></li>
+        <li class="toc__item"><a class="toc__link" href="#step3"><span class="toc__index">7</span><span>STEP3｜Canvaで絵本に仕上げる</span></a></li>
+        <li class="toc__item"><a class="toc__link" href="#step4"><span class="toc__index">8</span><span>STEP4｜Amazon KDPで出版する</span></a></li>
+        <li class="toc__item"><a class="toc__link" href="#completed-example"><span class="toc__index">9</span><span>完成イメージ</span></a></li>
+        <li class="toc__item"><a class="toc__link" href="#stumbling-points"><span class="toc__index">10</span><span>よくあるつまずきポイント</span></a></li>
+        <li class="toc__item"><a class="toc__link" href="#caution"><span class="toc__index">11</span><span>作るときの注意点</span></a></li>
+        <li class="toc__item"><a class="toc__link" href="#summary"><span class="toc__index">12</span><span>まとめ</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       はじめに
+  ============================================================ -->
+  <section class="section section--soft" id="intro" aria-labelledby="intro-heading">
+    <div class="section__inner reveal">
+      <h2 class="section__heading" id="intro-heading">はじめに</h2>
+      <div class="prose">
+        <p>昼間は子どもと全力で遊んで、夜のほんの少しの時間だけ自分の時間にする。<br>そんな暮らしの中で、私が最近こっそり続けているのが「AIで絵本を作る」ことです。</p>
+        <p>絵は描けません。<br>文章を書くのも得意ではありません。<br>それでも、AIに相談しながら少しずつ形にしていくことができました。</p>
+        <p>このガイドは、そんな私と同じように<br>「AIって難しそう」「絵本なんて自分には作れない」<br>と感じている方のために作りました。</p>
+        <p>むずかしい専門用語はできるだけ使わず、<br>ひとつずつ順番に進めれば迷わないようにまとめています。</p>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       3. メインプロンプト（実例動画の直後に表示）
+       AI絵本ってどうやって作るの？
   ============================================================ -->
-  <section class="section section--soft" id="main-prompt" aria-labelledby="main-prompt-heading">
+  <section class="section" id="how-it-works" aria-labelledby="how-it-works-heading">
     <div class="section__inner reveal">
-      <h2 class="section__heading" id="main-prompt-heading">この指示文をコピーして使ってください</h2>
-      <p class="section__desc">下の文章をコピーして、<br>スクショと一緒にChatGPTへ送ってください。</p>
-
-      <div class="prompt-box">
-        <pre class="prompt-box__text" id="main-prompt-text">添付したスクショは
-YouTubeで人気の動画です。
-
-以下を分析してください。
-
-・この動画が伸びた理由
-・ターゲット
-・冒頭3秒の工夫
-・構成
-・視聴維持率が高そうなポイント
-・この動画を参考にした新しい企画を10個考えてください。
-
-初心者にも分かるように解説してください。</pre>
-        <button
-          type="button"
-          class="btn btn--primary copy-btn"
-          data-copy-target="main-prompt-text"
-          aria-label="メインプロンプトの指示文をコピーする">
-          <span class="copy-btn__label">この指示文をコピーする</span>
-          <span class="copy-btn__done" role="status" aria-live="polite">コピーしました</span>
-        </button>
+      <h2 class="section__heading" id="how-it-works-heading">AI絵本ってどうやって作るの？</h2>
+      <p class="section__desc">「AIで絵本を作る」といっても、やることはシンプルです。<br>いくつかの道具を、順番に使っていくだけです。</p>
+      <div class="prose">
+        <ul class="check-list">
+          <li>ChatGPT ── 絵本のストーリー（文章）を一緒に考えてもらう</li>
+          <li>画像生成AI ── 絵本のイラストを作ってもらう</li>
+          <li>Canva ── 文章とイラストを絵本の形に組み立てる</li>
+          <li>Amazon KDP ── 完成した絵本をAmazonで出版する</li>
+        </ul>
+        <p>絵が描けなくても、文章力がなくても、<br>それぞれの工程をAIやツールに手伝ってもらいながら進めることができます。</p>
+        <p>次の章から、この4つを順番に、<br>ひとつずつ丁寧に見ていきましょう。</p>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       4〜6. STEP（steps-container の中身は js/content.js の steps
+       Amazonではどんな絵本がある？
+  ============================================================ -->
+  <section class="section section--soft" id="amazon-examples" aria-labelledby="amazon-examples-heading">
+    <div class="section__inner reveal">
+      <h2 class="section__heading" id="amazon-examples-heading">Amazonではどんな絵本がある？</h2>
+      <div class="prose">
+        <p>Amazonでは、AIを活用した制作事例も見られるようになっています。</p>
+        <p>実際に、1,210円で販売され、60件以上のレビューが付いている作品もあります。</p>
+        <p>※レビューの数がそのまま販売数や売上を示すものではないため、あくまで一つの参考としてご覧ください。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       AI絵本完成までの4STEP（概要カード）
+  ============================================================ -->
+  <section class="section" id="step-overview" aria-labelledby="step-overview-heading">
+    <div class="section__inner reveal">
+      <h2 class="section__heading" id="step-overview-heading">AI絵本完成までの4STEP</h2>
+      <p class="section__desc">全体の流れを先に確認しておきましょう。<br>タップすると、それぞれの詳しい説明に移動できます。</p>
+      <div class="card-grid">
+        <a class="card card--link" href="#step1">
+          <span class="card__icon" aria-hidden="true">📝</span>
+          <p class="step__number step__number--card">STEP 1</p>
+          <h3 class="card__title">ChatGPTで<br>ストーリーを作る</h3>
+        </a>
+        <a class="card card--link" href="#step2">
+          <span class="card__icon" aria-hidden="true">🎨</span>
+          <p class="step__number step__number--card">STEP 2</p>
+          <h3 class="card__title">AIで<br>イラストを作る</h3>
+        </a>
+        <a class="card card--link" href="#step3">
+          <span class="card__icon" aria-hidden="true">📖</span>
+          <p class="step__number step__number--card">STEP 3</p>
+          <h3 class="card__title">Canvaで<br>絵本に仕上げる</h3>
+        </a>
+        <a class="card card--link" href="#step4">
+          <span class="card__icon" aria-hidden="true">⭐</span>
+          <p class="step__number step__number--card">STEP 4</p>
+          <h3 class="card__title">Amazon KDPで<br>出版する</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STEP1〜4（steps-container の中身は js/content.js の steps
        配列から自動生成されます。ここにあるHTMLは、JavaScriptが
        読み込めなかった場合に表示される初期表示用です）
   ============================================================ -->
@@ -122,17 +173,43 @@ YouTubeで人気の動画です。
     <section class="section step" id="step1" aria-labelledby="step1-heading">
       <div class="section__inner reveal">
         <p class="step__number">STEP 1</p>
-        <h2 class="step__title" id="step1-heading">気になる人気動画を見つける</h2>
+        <h2 class="step__title" id="step1-heading">ChatGPTでシナリオ作成</h2>
         <div class="prose">
-          <p>YouTubeやInstagramで、次のような動画を探しましょう。</p>
-          <ul class="check-list">
-            <li>最後まで見てしまった動画</li>
-            <li>再生回数が多い動画</li>
-            <li>コメントや反応が多い動画</li>
-            <li>自分の発信テーマに近い動画</li>
-            <li>なぜか気になって何度も見た動画</li>
-          </ul>
-          <p>そのまま真似するのではなく、「なぜ気になったのか」を考える参考として選びましょう。</p>
+          <p>まずはChatGPTに、絵本のストーリーを一緒に考えてもらいます。</p>
+          <p>下のプロンプトをコピーして、【】の部分だけ自分用に書き換えてChatGPTに送ってください。</p>
+        </div>
+        <div class="prompt-box step__prompt">
+          <p class="prompt-box__heading">STEP1用プロンプト</p>
+          <p class="prompt-box__desc">この指示文をコピーして、ChatGPTに送ってください。</p>
+          <pre class="prompt-box__text" id="step1-prompt-text">あなたは、3〜6歳向けの絵本を作るプロの絵本作家です。
+
+以下の内容をもとに、
+全10ページの絵本シナリオを作ってください。
+
+【テーマ】
+◯◯
+
+【登場人物】
+◯◯
+
+【絵本で伝えたいこと】
+◯◯
+
+【条件】
+
+・全10ページ
+・各ページに「場面」と「本文」を書く
+・3〜6歳でも理解できるやさしい言葉を使う
+・読み聞かせしやすい短い文章にする
+・最後はあたたかい気持ちになれる終わり方にする</pre>
+          <button type="button" class="btn btn--primary copy-btn" data-copy-target="step1-prompt-text" aria-label="STEP1用プロンプトをコピーする">
+            <span class="copy-btn__label">この指示文をコピーする</span>
+            <span class="copy-btn__done" role="status" aria-live="polite">コピーしました</span>
+          </button>
+        </div>
+        <div class="note-box">
+          <p class="note-box__label">補足</p>
+          <p>【】の部分だけ自分用に変えればOKです。テーマ例：友情／勇気／親子／挑戦／思いやり／自分らしさ　※どのテーマが良い結果につながるかを保証するものではありません。</p>
         </div>
       </div>
     </section>
@@ -140,20 +217,58 @@ YouTubeで人気の動画です。
     <section class="section section--soft step" id="step2" aria-labelledby="step2-heading">
       <div class="section__inner reveal">
         <p class="step__number">STEP 2</p>
-        <h2 class="step__title" id="step2-heading">動画のスクショを撮る</h2>
+        <h2 class="step__title" id="step2-heading">AIでイラスト作成</h2>
         <div class="prose">
-          <p>動画の流れが分かるように、3〜5枚ほどスクショを撮ります。</p>
-          <ul class="check-list">
-            <li>動画のタイトルやサムネイル</li>
-            <li>冒頭の場面</li>
-            <li>内容が大きく動く場面</li>
-            <li>途中の重要な場面</li>
-            <li>最後のまとめや案内部分</li>
-          </ul>
+          <p>STEP1で作ったストーリーをもとに、各ページのイラストを生成するためのプロンプトを作ります。</p>
+          <p>ChatGPTの画像生成機能など、お使いの画像生成AIで使ってみてください。</p>
+          <p>下のプロンプトをコピーして、STEP1のストーリーと一緒にAIへ送ってください。</p>
         </div>
-        <div class="note-box">
-          <p class="note-box__label">補足</p>
-          <p>YouTubeのURLだけでは分析できない場合があるため、スクショを送る方法がおすすめです。</p>
+        <div class="prompt-box step__prompt">
+          <p class="prompt-box__heading">STEP2用プロンプト</p>
+          <p class="prompt-box__desc">STEP1のストーリーと一緒にコピーして送ってください。</p>
+          <pre class="prompt-box__text" id="step2-prompt-text">先ほど作成した絵本シナリオをもとに、
+各ページの絵本イラストを生成するための
+画像生成プロンプトを作ってください。
+
+【条件】
+
+・全10ページ分作成
+・正方形
+・子ども向け絵本のイラスト
+・やさしい色合い
+・明るくあたたかい雰囲気
+・キャラクターの見た目を全ページで統一する
+
+最初に、
+キャラクターの
+
+・種類
+・色
+・服装
+・目
+・表情
+・特徴
+
+をまとめた
+「キャラクター共通設定」を作ってください。
+
+その設定を、
+各ページの画像生成プロンプトにも必ず含めてください。
+
+各ページごとに、
+
+① 日本語の場面説明
+② 画像生成用プロンプト
+
+の順番で出力してください。</pre>
+          <button type="button" class="btn btn--primary copy-btn" data-copy-target="step2-prompt-text" aria-label="STEP2用プロンプトをコピーする">
+            <span class="copy-btn__label">この指示文をコピーする</span>
+            <span class="copy-btn__done" role="status" aria-live="polite">コピーしました</span>
+          </button>
+        </div>
+        <div class="warning-box">
+          <p class="warning-box__label">⚠️ ここ大事</p>
+          <p>「キャラクターの見た目を固定する指示」を必ず含めるのがポイントです。ただし、これで完全に同じキャラクターになるとは限りません。画像生成AIでは、ページごとに見た目が多少変わることがあります。気になる場合は、該当ページだけ作り直してみてください。</p>
         </div>
       </div>
     </section>
@@ -161,127 +276,161 @@ YouTubeで人気の動画です。
     <section class="section step" id="step3" aria-labelledby="step3-heading">
       <div class="section__inner reveal">
         <p class="step__number">STEP 3</p>
-        <h2 class="step__title" id="step3-heading">スクショと指示文を<br>ChatGPTに送る</h2>
+        <h2 class="step__title" id="step3-heading">Canvaで絵本に仕上げる</h2>
         <div class="prose">
-          <p>ChatGPTを開いたら、<br>先ほど撮ったスクショを添付します。</p>
-          <p>そのあと、<br>このページにある指示文をコピーして送ってください。</p>
-          <p>難しい設定は必要ありません。</p>
-          <p>スクショを添付して、<br>指示文を貼り付けて送るだけです。</p>
+          <p>文章とイラストが揃ったら、Canvaで絵本の形に組み立てていきます。</p>
+          <p>何をするか：Canvaで新しいデザインを作成し、表紙ページ・本文ページの順に、イラストと文字を配置していきます。</p>
+          <ul class="check-list">
+            <li>出版したいサイズ（判型）を先に決める</li>
+            <li>Amazon KDPの最新仕様を確認する</li>
+            <li>確認したサイズでCanvaの新規デザインを作成する</li>
+            <li>表紙ページにタイトルとイラストを配置する</li>
+            <li>本文ページに、1ページずつイラストと文章を配置する</li>
+            <li>プレビューで見やすさを確認しながら、文字の大きさや余白を調整する</li>
+          </ul>
+          <p>注意点：Amazon KDPでは、選択する判型や裁ち落としなどによって必要なサイズや仕様が変わります。<br>先にサイズを決め打ちするのではなく、「出版するサイズを先に決め、KDPの最新仕様を確認してからCanvaのサイズを設定する」という順番がおすすめです。</p>
+          <p>フォントの大きさも「〇pt以上なら正解」という決まった正解はありません。実際の仕上がりをプレビューで確認しながら、読みやすい大きさ・余白を確保しましょう。</p>
+        </div>
+        <div class="note-box">
+          <p class="note-box__label">一例</p>
+          <p>サイズ設定に迷ったときの参考として、正方形（21cm×21cm程度）で作る方もいます。ただしこれはあくまで一例で、実際のサイズは選ぶ判型やKDPの最新仕様に合わせて決めてください。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft step" id="step4" aria-labelledby="step4-heading">
+      <div class="section__inner reveal">
+        <p class="step__number">STEP 4</p>
+        <h2 class="step__title" id="step4-heading">Amazon KDPで出版する</h2>
+        <div class="prose">
+          <p>Canvaで絵本が完成したら、Amazon KDPを使って出版します。</p>
+          <ul class="check-list">
+            <li>KDPアカウントを作成する</li>
+            <li>本の情報（タイトル・紹介文など）を登録する</li>
+            <li>原稿・表紙をアップロードする</li>
+            <li>プレビューで仕上がりを確認する</li>
+            <li>価格などを設定する</li>
+            <li>出版申請をする</li>
+          </ul>
+          <p>注意点：審査や公開までの時間は状況によって変わります。「最短◯日で完了」と決まっているわけではないため、Amazon側の審査後、問題がなければ商品ページが公開される、という認識で待ちましょう。</p>
+          <p>カテゴリー選びについても、「このカテゴリーを選べば上位に入りやすい」といった保証はありません。読んでほしい方に届きやすいカテゴリーを、落ち着いて選んでください。</p>
         </div>
       </div>
     </section>
   </div>
 
   <!-- ============================================================
-       7. 結果をよくするコツ
+       完成イメージ（オリジナル絵本サンプル）
   ============================================================ -->
-  <section class="section" id="tips" aria-labelledby="tips-heading">
+  <section class="section" id="completed-example" aria-labelledby="completed-example-heading">
     <div class="section__inner reveal">
-      <h2 class="section__heading" id="tips-heading">さらに分かりやすい答えを<br>出してもらうコツ</h2>
-      <div class="card-grid">
-        <div class="card">
-          <span class="card__icon" aria-hidden="true">📝</span>
-          <h3 class="card__title">自分の目的を伝える</h3>
-          <p class="card__desc">「Instagramリールの企画に使いたい」など、何に使いたいのかを伝えると、より目的に合った答えが出やすくなります。</p>
+      <h2 class="section__heading" id="completed-example-heading">完成イメージ</h2>
+      <p class="section__desc">実際にこのガイドの流れで作った、オリジナルの絵本サンプルをご紹介します。</p>
+      <div class="book-mock">
+        <div class="book-mock__cover">
+          <span class="book-mock__emoji" aria-hidden="true">⭐</span>
+          <p class="book-mock__title">ルルと星のたね</p>
+          <p class="book-mock__tagline">小さな女の子ルルが、夜空からふってきた不思議な「星のたね」を育てる、あたたかいおはなし。</p>
         </div>
-        <div class="card">
-          <span class="card__icon" aria-hidden="true">🙋</span>
-          <h3 class="card__title">誰向けかを伝える</h3>
-          <p class="card__desc">「40代・50代のAI初心者向け」など、届けたい相手を伝えると、企画の方向性が具体的になります。</p>
+        <div class="book-mock__pages">
+          <div class="book-mock__page">
+            <p class="book-mock__page-label">表紙</p>
+            <p class="book-mock__page-text">「ルルと星のたね」<br>ある夜、ルルの窓辺に、小さな光る種が落ちてきました。</p>
+          </div>
+          <div class="book-mock__page">
+            <p class="book-mock__page-label">中面（1ページ目）</p>
+            <p class="book-mock__page-text">「これ、なんだろう？」<br>ルルはそっと種を手のひらにのせて、月明かりにかざしてみました。</p>
+          </div>
+          <div class="book-mock__page">
+            <p class="book-mock__page-label">中面（2ページ目）</p>
+            <p class="book-mock__page-text">毎晩少しずつ水をあげると、種はぽかぽかと光りながら、ゆっくり育っていきました。</p>
+          </div>
         </div>
-        <div class="card">
-          <span class="card__icon" aria-hidden="true">💬</span>
-          <h3 class="card__title">難しい場合は聞き直す</h3>
-          <p class="card__desc">答えが難しいと感じたら、「もっと簡単な言葉で説明してください」と追加で伝えて大丈夫です。</p>
+      </div>
+      <p class="book-mock__note">※本文はすべては掲載していません。イメージとして表紙と中面の一部をご紹介しています。</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       よくあるつまずきポイント
+  ============================================================ -->
+  <section class="section section--soft" id="stumbling-points" aria-labelledby="stumbling-points-heading">
+    <div class="section__inner reveal">
+      <h2 class="section__heading" id="stumbling-points-heading">よくあるつまずきポイント</h2>
+      <p class="section__desc">はじめてAI絵本を作るときに、迷いやすいポイントをまとめました。</p>
+      <div class="faq-list">
+        <div class="card faq-card">
+          <p class="faq-card__q">Q. ChatGPTからの返事が長すぎて、うまくまとまりません。</p>
+          <p class="faq-card__a">「もっと短くしてください」「小学生にも分かる言葉にしてください」と、追加でお願いしてみましょう。ChatGPTとは何度でもやり取りして大丈夫です。</p>
+        </div>
+        <div class="card faq-card">
+          <p class="faq-card__q">Q. イラストのキャラクターが、ページごとに違って見えます。</p>
+          <p class="faq-card__a">画像生成AIでは、ページごとに見た目が多少変わることがあります。STEP2の「キャラクター共通設定」をもう一度伝えながら、気になるページだけ作り直してみてください。</p>
+        </div>
+        <div class="card faq-card">
+          <p class="faq-card__q">Q. Canvaでの文字の配置が難しく感じます。</p>
+          <p class="faq-card__a">最初から完璧を目指さなくて大丈夫です。まずは1ページ分だけ配置してみて、プレビューで見やすいかどうかを確認しながら、少しずつ整えていきましょう。</p>
+        </div>
+        <div class="card faq-card">
+          <p class="faq-card__q">Q. Amazon KDPの登録画面で、どこまで入力すればいいか分かりません。</p>
+          <p class="faq-card__a">一度にすべて完璧に入力する必要はありません。下書き保存をしながら、Amazon KDPの案内に沿って一つずつ埋めていけば大丈夫です。</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       8. 追加で使える質問5選
-  ============================================================ -->
-  <section class="section section--soft" id="extra-questions" aria-labelledby="extra-questions-heading">
-    <div class="section__inner reveal">
-      <h2 class="section__heading" id="extra-questions-heading">もっと深く分析したいときの<br>追加質問5選</h2>
-      <p class="section__desc">最初の分析結果を見たあと、<br>気になる質問を追加で送ってみてください。</p>
-
-      <div class="question-list" id="extra-questions-list">
-        <div class="question-card">
-          <pre class="question-card__text" id="question-1">この動画が伸びた一番大きな理由を、
-初心者にも分かるように3つ教えてください。</pre>
-          <button type="button" class="btn btn--outline copy-btn" data-copy-target="question-1" aria-label="追加質問1をコピーする">
-            <span class="copy-btn__label">コピーする</span>
-            <span class="copy-btn__done" role="status" aria-live="polite">コピーしました</span>
-          </button>
-        </div>
-        <div class="question-card">
-          <pre class="question-card__text" id="question-2">この動画の内容を、
-40代・50代の初心者向けに変えるとしたら、
-どのような企画になりますか？</pre>
-          <button type="button" class="btn btn--outline copy-btn" data-copy-target="question-2" aria-label="追加質問2をコピーする">
-            <span class="copy-btn__label">コピーする</span>
-            <span class="copy-btn__done" role="status" aria-live="polite">コピーしました</span>
-          </button>
-        </div>
-        <div class="question-card">
-          <pre class="question-card__text" id="question-3">この動画をInstagramリールにする場合、
-30秒以内の構成を考えてください。</pre>
-          <button type="button" class="btn btn--outline copy-btn" data-copy-target="question-3" aria-label="追加質問3をコピーする">
-            <span class="copy-btn__label">コピーする</span>
-            <span class="copy-btn__done" role="status" aria-live="polite">コピーしました</span>
-          </button>
-        </div>
-        <div class="question-card">
-          <pre class="question-card__text" id="question-4">このテーマを参考にしながら、
-内容が重ならない新しい企画を10個考えてください。</pre>
-          <button type="button" class="btn btn--outline copy-btn" data-copy-target="question-4" aria-label="追加質問4をコピーする">
-            <span class="copy-btn__label">コピーする</span>
-            <span class="copy-btn__done" role="status" aria-live="polite">コピーしました</span>
-          </button>
-        </div>
-        <div class="question-card">
-          <pre class="question-card__text" id="question-5">この動画の良い部分と、
-そのまま真似しない方がよい部分を教えてください。</pre>
-          <button type="button" class="btn btn--outline copy-btn" data-copy-target="question-5" aria-label="追加質問5をコピーする">
-            <span class="copy-btn__label">コピーする</span>
-            <span class="copy-btn__done" role="status" aria-live="polite">コピーしました</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       9. 注意点
+       AI絵本を作るときの注意点
   ============================================================ -->
   <section class="section" id="caution" aria-labelledby="caution-heading">
     <div class="section__inner reveal">
-      <h2 class="section__heading" id="caution-heading">人気動画を参考にするときの注意点</h2>
-      <div class="prose">
-        <p>参考にするのは、テーマの見せ方や構成、伝え方のヒントです。<br>文章・画像・動画をそのまま使うのは避け、自分らしい企画に変えていきましょう。</p>
-      </div>
+      <h2 class="section__heading" id="caution-heading">AI絵本を作るときの注意点</h2>
+      <p class="section__desc">初心者向けのガイドですが、ここだけは気をつけてほしいポイントをまとめました。むずかしく考えず、ひとつずつ確認してみてください。</p>
+      <ul class="check-list check-list--warning">
+        <li>有名な作品やキャラクターをそのまま使わない</li>
+        <li>他人の著作物をそのままコピーしない</li>
+        <li>使用する画像生成AIの利用規約を確認する</li>
+        <li>Amazon KDPの最新ガイドラインを確認する</li>
+        <li>AIが作った文章や画像は、必ず自分の目でも確認する</li>
+        <li>誤字脱字、画像の崩れ、ページ順を出版前にチェックする</li>
+        <li>AIを使ったからといって、必ず売れるとは限らないことを理解しておく</li>
+      </ul>
     </div>
   </section>
 
   <!-- ============================================================
-       10. 最後の案内（CTA）
+       まとめ
+  ============================================================ -->
+  <section class="section section--soft" id="summary" aria-labelledby="summary-heading">
+    <div class="section__inner reveal">
+      <h2 class="section__heading" id="summary-heading">まとめ</h2>
+      <ul class="summary-list">
+        <li><span class="summary-list__number">1</span><span>ChatGPTでストーリーを作る</span></li>
+        <li><span class="summary-list__number">2</span><span>画像生成AIでイラストを作る</span></li>
+        <li><span class="summary-list__number">3</span><span>Canvaで絵本の形に仕上げる</span></li>
+        <li><span class="summary-list__number">4</span><span>Amazon KDPで出版する</span></li>
+        <li><span class="summary-list__number">5</span><span>この4STEPを、順番に進めるだけでOK</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       AIマネタイズの教科書への案内（CTA）
   ============================================================ -->
   <section class="section" id="cta" aria-labelledby="cta-heading">
     <div class="section__inner reveal">
       <div class="cta-card">
-        <h2 class="cta-card__heading" id="cta-heading">AIをもっと仕事や暮らしに<br>活かしてみたい方へ</h2>
+        <h2 class="cta-card__heading" id="cta-heading">AI絵本の、その先にあるもの</h2>
         <div class="prose">
-          <p>今回紹介した方法は、<br>AIの活用法のほんの一例です。</p>
-          <p>AIを知るだけではなく、<br>実際の仕事や日々の作業にどう活かすかを知ることで、<br>できることはさらに広がります。</p>
+          <p>AI絵本は、AIの活用方法のひとつです。<br>実際に作ってみると、「AIってこんなことまでできるんだ」と感じてもらえると思います😊</p>
+          <p>ただ、AIを使えるようになることと、AIを仕事に活かすことは少し違います。</p>
           <p>
-            AI初心者さん向けに、<br>
-            AIを仕事に活かす考え方や方法をまとめた<br>
+            「もっとAIを仕事に活かしてみたい」「自分に合うAIの使い方を知りたい」という方のために、私が実際に学び、仕事で使っている内容を<br>
             <strong class="cta-card__highlight">『AIマネタイズの教科書』</strong><br>
-            も無料でご用意しています。
+            にまとめています。興味がある方はこちらから受け取ってください。
           </p>
         </div>
-        <a class="cta-card__banner-link" id="cta-button" href="https://sub.aione.co.jp/line/open/ErxG3f10mmcK?mtid=8LTecV7UlNz5" target="_blank" rel="noopener" aria-label="AIマネタイズの教科書を受け取る">
+        <a class="cta-card__banner-link" id="cta-button" href="https://sub.aione.co.jp/line/open/ErxG3f10mmcK?mtid=8LTecV7UlNz5" target="_blank" rel="noopener" aria-label="AIマネタイズの教科書を無料で受け取る">
           <img src="assets/images/cta-banner.png" alt="無料プレゼント AIマネタイズ教科書。AIで働き方の選択肢を広げたい方へ。LINE登録はこちら" class="cta-card__banner-img">
         </a>
       </div>
@@ -291,7 +440,7 @@ YouTubeで人気の動画です。
 </main>
 
 <!-- ============================================================
-     11. フッター
+     フッター
 ============================================================ -->
 <footer class="footer">
   <p>© MION</p>

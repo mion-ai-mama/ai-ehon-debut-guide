@@ -6,16 +6,22 @@
    ============================================================ */
 
 :root {
-  /* 色 */
-  --color-bg: #ffffff;
-  --color-bg-soft: #f4faff;
-  --color-primary: #2b8ce6;
-  --color-primary-dark: #1b6fc0;
-  --color-accent-light: #d9f0ff;
-  --color-text: #223244;
-  --color-text-muted: #5b6b7c;
-  --color-border: #e3edf5;
-  --color-card-shadow: rgba(43, 140, 230, 0.12);
+  /* 色（絵本らしい、やさしいピンク・アイボリー・ベージュ系） */
+  --color-bg: #fffdfb;
+  --color-bg-soft: #fdf3f5;
+  --color-primary: #d97a9e;
+  --color-primary-dark: #b85c80;
+  --color-accent-light: #fbe6ee;
+  --color-beige: #f6ead9;
+  --color-text: #4a3f3d;
+  --color-text-muted: #8a7b78;
+  --color-border: #f0e0d8;
+  --color-card-shadow: rgba(216, 122, 158, 0.16);
+
+  /* 注意ボックス（アンバー系） */
+  --color-warning-bg: #fff4e2;
+  --color-warning-border: #f4d29a;
+  --color-warning-text: #8a5a1f;
 
   /* 形 */
   --radius-lg: 20px;
@@ -195,12 +201,12 @@ button:focus-visible {
 }
 
 /* ============================================================
-   1. ファーストビュー（ヒーロー）
+   1. 表紙（ヒーロー）
 ============================================================ */
 
 .hero {
   padding: clamp(3.5rem, 12vw, 6rem) 1.25rem clamp(3rem, 8vw, 4.5rem);
-  background: linear-gradient(180deg, var(--color-accent-light) 0%, #ffffff 100%);
+  background: linear-gradient(180deg, var(--color-accent-light) 0%, var(--color-bg) 100%);
   text-align: center;
 }
 
@@ -210,6 +216,14 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.hero__kicker {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  letter-spacing: 0.04em;
+  margin: 0 0 0.75rem;
 }
 
 .hero__label {
@@ -233,16 +247,71 @@ button:focus-visible {
 }
 
 .hero__subtitle {
-  font-size: clamp(1.2rem, 4.5vw, 1.5rem);
+  font-size: clamp(1.15rem, 4.2vw, 1.4rem);
   line-height: 1.6;
-  margin: 0 0 1.5rem;
+  margin: 0 0 1rem;
   font-weight: 700;
   color: var(--color-primary-dark);
+}
+
+.hero__tag {
+  display: inline-block;
+  background: var(--color-beige);
+  color: var(--color-text);
+  border-radius: 999px;
+  padding: 0.35em 1em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 0 0 1.75rem;
 }
 
 .hero__desc {
   color: var(--color-text-muted);
   margin: 0 0 2.25rem;
+}
+
+/* ============================================================
+   目次（TOC）
+============================================================ */
+
+.toc__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+.toc__link {
+  display: flex;
+  align-items: center;
+  gap: 0.9em;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.9em 1.1em;
+  text-decoration: none;
+  font-weight: 700;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.toc__link:hover {
+  border-color: var(--color-primary);
+  transform: translateX(2px);
+}
+
+.toc__index {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8em;
+  height: 1.8em;
+  border-radius: 50%;
+  background: var(--color-accent-light);
+  color: var(--color-primary-dark);
+  font-size: 0.85rem;
+  font-weight: 800;
 }
 
 /* ============================================================
@@ -272,6 +341,20 @@ button:focus-visible {
   font-weight: 700;
 }
 
+.check-list--warning {
+  background: var(--color-warning-bg);
+  border: 1px solid var(--color-warning-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+}
+.check-list--warning li::before {
+  content: "⚠";
+  color: var(--color-warning-text);
+}
+.check-list--warning li {
+  color: var(--color-warning-text);
+}
+
 /* ============================================================
    カード（グリッド）
 ============================================================ */
@@ -279,10 +362,10 @@ button:focus-visible {
 .card-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.1rem;
+  gap: 1rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .card-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -294,6 +377,17 @@ button:focus-visible {
   border-radius: var(--radius-lg);
   padding: 1.75rem 1.5rem;
   box-shadow: 0 12px 28px -18px var(--color-card-shadow);
+}
+
+.card--link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card--link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -16px var(--color-card-shadow);
 }
 
 .card__icon {
@@ -319,56 +413,9 @@ button:focus-visible {
   color: var(--color-text-muted);
 }
 
-/* ============================================================
-   実例動画
-============================================================ */
-
-.video-card {
-  background: #fff;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 1.25rem;
-  box-shadow: 0 12px 28px -18px var(--color-card-shadow);
-}
-
-.video-card__player {
-  /* 動画の実際の縦横比に合わせて自動でサイズが決まります（縦長・横長どちらもOK） */
-  width: 100%;
-  max-width: 420px;
-  margin: 0 auto;
-  border-radius: var(--radius-md);
-  background: #0f1720;
-}
-
-.video-card__fallback {
-  color: var(--color-text-muted);
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-.video-card__caption {
-  margin: 1.5rem 0 0;
-  text-align: center;
-  color: var(--color-text-muted);
-}
-
-/* YouTube埋め込みモード用（YouTube Shorts等、縦長9:16の動画を想定した固定枠） */
-.video-card__embed-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 320px;
-  aspect-ratio: 9 / 16;
-  margin: 0 auto;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  background: #0f1720;
-}
-.video-card__embed-wrap iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+.step__number--card {
+  margin: 0 0 0.3rem;
+  font-size: 0.8rem;
 }
 
 /* ============================================================
@@ -407,6 +454,24 @@ button:focus-visible {
   margin-bottom: 0;
 }
 
+.warning-box {
+  margin-top: 1.75rem;
+  background: var(--color-warning-bg);
+  border: 1px solid var(--color-warning-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.4rem;
+  color: var(--color-warning-text);
+}
+
+.warning-box__label {
+  font-weight: 800;
+  margin: 0 0 0.5em;
+}
+
+.warning-box p:last-child {
+  margin-bottom: 0;
+}
+
 /* ============================================================
    プロンプトボックス（コピー機能）
 ============================================================ */
@@ -418,6 +483,20 @@ button:focus-visible {
   border-radius: var(--radius-lg);
   padding: 1.5rem;
   box-shadow: 0 12px 28px -18px var(--color-card-shadow);
+}
+
+.step__prompt {
+  margin-top: 1.75rem;
+}
+
+.prompt-box__heading {
+  font-weight: 800;
+  margin: 0 0 0.4em;
+}
+
+.prompt-box__desc {
+  color: var(--color-text-muted);
+  margin: 0 0 1rem;
 }
 
 .prompt-box__text,
@@ -459,6 +538,92 @@ button:focus-visible {
 }
 
 /* ============================================================
+   よくあるつまずきポイント（FAQカード）
+============================================================ */
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.faq-card__q {
+  font-weight: 800;
+  margin: 0 0 0.6em;
+}
+
+.faq-card__a {
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ============================================================
+   完成イメージ（絵本モックアップ）
+============================================================ */
+
+.book-mock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.book-mock__cover {
+  background: linear-gradient(160deg, var(--color-accent-light) 0%, var(--color-beige) 100%);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 1.75rem;
+  text-align: center;
+}
+
+.book-mock__emoji {
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.book-mock__title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+}
+
+.book-mock__tagline {
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.book-mock__pages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.book-mock__page {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.4rem;
+  box-shadow: 0 12px 28px -18px var(--color-card-shadow);
+}
+
+.book-mock__page-label {
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  margin: 0 0 0.5em;
+  font-size: 0.85rem;
+}
+
+.book-mock__page-text {
+  margin: 0;
+}
+
+.book-mock__note {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  text-align: center;
+  margin: 1.25rem 0 0;
+}
+
+/* ============================================================
    追加質問リスト
 ============================================================ */
 
@@ -478,7 +643,7 @@ button:focus-visible {
 
 .summary-list {
   list-style: none;
-  margin: 0 0 2rem;
+  margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
