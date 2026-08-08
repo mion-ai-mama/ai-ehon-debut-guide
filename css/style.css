@@ -648,27 +648,20 @@ button:focus-visible {
 }
 
 .book-mock__cover {
-  background: linear-gradient(160deg, var(--color-accent-light) 0%, var(--color-beige) 100%);
-  border-radius: var(--radius-lg);
-  padding: 2.5rem 1.75rem;
+  margin: 0;
   text-align: center;
 }
 
-.book-mock__emoji {
-  display: inline-block;
-  font-size: 2.5rem;
-  margin-bottom: 0.75rem;
+.book-mock__cover img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 28px -18px var(--color-card-shadow);
 }
 
 .book-mock__title {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 800;
-  margin: 0 0 0.75rem;
-}
-
-.book-mock__tagline {
-  color: var(--color-text-muted);
-  margin: 0;
+  margin: 0.9rem 0 0;
 }
 
 .book-mock__pages {
@@ -678,22 +671,26 @@ button:focus-visible {
 }
 
 .book-mock__page {
+  margin: 0;
   background: #fff;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 1.25rem 1.4rem;
+  padding: 0.75rem;
   box-shadow: 0 12px 28px -18px var(--color-card-shadow);
+}
+
+.book-mock__page img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius-sm);
 }
 
 .book-mock__page-label {
   font-weight: 800;
   color: var(--color-primary-dark);
-  margin: 0 0 0.5em;
+  margin: 0.75rem 0.25rem 0;
   font-size: 0.85rem;
-}
-
-.book-mock__page-text {
-  margin: 0;
+  text-align: center;
 }
 
 .book-mock__note {

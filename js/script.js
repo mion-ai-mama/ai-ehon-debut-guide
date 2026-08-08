@@ -252,19 +252,19 @@
 
     const book = c.book || {};
     const wrap = root.querySelector(".book-mock");
+    const cover = book.cover || {};
     const coverHtml = `
-      <div class="book-mock__cover">
-        <span class="book-mock__emoji" aria-hidden="true">${book.coverEmoji || "📖"}</span>
-        <p class="book-mock__title">${book.title || ""}</p>
-        <p class="book-mock__tagline">${book.coverTagline || ""}</p>
-      </div>`;
+      <figure class="book-mock__cover">
+        <img src="${cover.src || ""}" alt="${escapeHtml(cover.alt || book.title || "")}" loading="lazy">
+        <figcaption class="book-mock__title">${book.title || ""}</figcaption>
+      </figure>`;
     const pagesHtml = (book.pages || [])
       .map(
         (page) => `
-      <div class="book-mock__page">
-        <p class="book-mock__page-label">${page.label}</p>
-        <p class="book-mock__page-text">${page.text}</p>
-      </div>`
+      <figure class="book-mock__page">
+        <img src="${page.src}" alt="${escapeHtml(page.alt || page.label || "")}" loading="lazy">
+        <figcaption class="book-mock__page-label">${page.label}</figcaption>
+      </figure>`
       )
       .join("");
     wrap.innerHTML = coverHtml + `<div class="book-mock__pages">${pagesHtml}</div>`;
