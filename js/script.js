@@ -167,6 +167,10 @@
         if (step.list && step.list.length) {
           prose += '<ul class="check-list">' + step.list.map((li) => `<li>${li}</li>`).join("") + "</ul>";
         }
+        if (step.numberedList && step.numberedList.length) {
+          prose +=
+            '<ol class="numbered-box">' + step.numberedList.map((li) => `<li>${li}</li>`).join("") + "</ol>";
+        }
         prose += (step.afterParagraphs || []).map((p) => `<p>${p}</p>`).join("");
 
         const promptHtml = step.prompt
@@ -193,6 +197,8 @@
         const warningHtml = step.warning
           ? `<div class="warning-box"><p class="warning-box__label">⚠️ ${step.warning.label}</p><p>${step.warning.text}</p></div>`
           : "";
+
+        const tipHtml = step.tip ? `<div class="tip-box"><p>${step.tip.emoji || "💡"} ${step.tip.text}</p></div>` : "";
 
         const officialLinkHtml = step.officialLink
           ? `
@@ -227,6 +233,7 @@
             ${screenshotsHtml}
             ${promptHtml}
             ${warningHtml}
+            ${tipHtml}
             ${noteHtml}
           </div>
         </section>`;
