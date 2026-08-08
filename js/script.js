@@ -251,25 +251,17 @@
     root.querySelector(".section__desc").innerHTML = c.description || "";
 
     const book = c.book || {};
-    const wrap = root.querySelector(".book-mock");
-    const cover = book.cover || {};
-    const coverHtml = `
-      <figure class="book-mock__cover">
-        <img src="${cover.src || ""}" alt="${escapeHtml(cover.alt || book.title || "")}" loading="lazy">
-        <figcaption class="book-mock__title">${book.title || ""}</figcaption>
-      </figure>`;
-    const pagesHtml = (book.pages || [])
+    const carousel = root.querySelector(".book-carousel");
+    carousel.innerHTML = (book.images || [])
       .map(
-        (page) => `
-      <figure class="book-mock__page">
-        <img src="${page.src}" alt="${escapeHtml(page.alt || page.label || "")}" loading="lazy">
-        <figcaption class="book-mock__page-label">${page.label}</figcaption>
-      </figure>`
+        (img) => `
+      <div class="book-carousel__item">
+        <img src="${img.src}" alt="${escapeHtml(img.alt || book.title || "")}" loading="lazy">
+      </div>`
       )
       .join("");
-    wrap.innerHTML = coverHtml + `<div class="book-mock__pages">${pagesHtml}</div>`;
 
-    const noteEl = root.querySelector(".book-mock__note");
+    const noteEl = root.querySelector(".book-carousel__note");
     if (noteEl) noteEl.innerHTML = c.note || "";
   }
 
