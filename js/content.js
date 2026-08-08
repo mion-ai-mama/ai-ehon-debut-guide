@@ -19,7 +19,7 @@ const CONTENT = {
   // サイト全体の設定（SEO・OGP・favicon）
   // ------------------------------------------------------------
   meta: {
-    pageTitle: "AI絵本デビュー完全ガイド｜絵心も文才もいらない絵本づくり4STEP",
+    pageTitle: "AI絵本デビュー完全ガイド｜絵心も文才もいらない絵本づくり3STEP",
     description:
       "絵心も文才もいらない。ChatGPTと画像生成AI、Canva、Amazon KDPを使って、AI初心者さんでも絵本づくりに挑戦できる完全ガイドです。コピペで使えるプロンプト付き。",
     // 絵本『おかあさん だいすき』の表紙イラストをOGP画像として使用（正方形1000x1000）
@@ -36,8 +36,8 @@ const CONTENT = {
     intro: true, // はじめに
     howItWorks: true, // AI絵本ってどうやって作るの？
     amazonExamples: true, // Amazonではどんな絵本がある？（数字は要ファクトチェック。amazonExamples内の文章だけ差し替えればOK）
-    stepOverview: true, // AI絵本完成までの4STEP（概要カード）
-    steps: true, // STEP1〜4 詳細
+    stepOverview: true, // AI絵本完成までの3STEP（概要カード）
+    steps: true, // STEP1〜3 詳細
     completedExample: true, // 完成イメージ（オリジナル絵本サンプル）
     stumblingPoints: true, // よくあるつまずきポイント
     caution: true, // AI絵本を作るときの注意点
@@ -54,11 +54,11 @@ const CONTENT = {
     titleLine1: "AI絵本デビュー",
     titleLine2: "完全ガイド",
     subtitleLine1: "絵心も文才もいらない。",
-    subtitleLine2: "AI初心者でもわかる絵本づくり4STEP",
+    subtitleLine2: "AI初心者でもわかる絵本づくり3STEP",
     tag: "コピペで使えるプロンプト付き",
     description:
-      "「AIで絵本を作る」<br>そう聞くと、<br>「絵なんて描けない」「文章を書くのも苦手」<br>「そもそも何から始めればいいの？」<br>と思うかもしれません。<br><br>でも今は、<br>ストーリーも、イラストも、<br>AIに相談しながら作れる時代です。<br><br>まとまった時間が取れない日は、<br>夜の短い時間を使って少しずつ進める——<br>そんな作り方でも大丈夫です。<br><br>このガイドでは、<br>AI初心者でも迷わないように、<br>絵本が完成するまでを4STEPでまとめました。",
-    buttonText: "4STEPを見てみる",
+      "「AIで絵本を作る」<br>そう聞くと、<br>「絵なんて描けない」「文章を書くのも苦手」<br>「そもそも何から始めればいいの？」<br>と思うかもしれません。<br><br>でも今は、<br>ストーリーも、イラストも、<br>AIに相談しながら作れる時代です。<br><br>まとまった時間が取れない日は、<br>夜の短い時間を使って少しずつ進める——<br>そんな作り方でも大丈夫です。<br><br>このガイドでは、<br>AI初心者でも迷わないように、<br>絵本が完成するまでを3STEPでまとめました。",
+    buttonText: "3STEPを見てみる",
     buttonScrollTargetId: "step-overview",
   },
 
@@ -71,11 +71,10 @@ const CONTENT = {
       { label: "はじめに", targetId: "intro" },
       { label: "AI絵本ってどうやって作るの？", targetId: "how-it-works" },
       { label: "Amazonではどんな絵本がある？", targetId: "amazon-examples" },
-      { label: "完成までの4STEP", targetId: "step-overview" },
+      { label: "完成までの3STEP", targetId: "step-overview" },
       { label: "STEP1｜ChatGPTでシナリオ作成", targetId: "step1" },
       { label: "STEP2｜AIでイラスト作成", targetId: "step2" },
-      { label: "STEP3｜Canvaで絵本に仕上げる", targetId: "step3" },
-      { label: "STEP4｜Amazon KDPで出版する", targetId: "step4" },
+      { label: "STEP3｜Canvaで仕上げてAmazonで出版", targetId: "step3" },
       { label: "完成イメージ", targetId: "completed-example" },
       { label: "よくあるつまずきポイント", targetId: "stumbling-points" },
       { label: "作るときの注意点", targetId: "caution" },
@@ -132,21 +131,20 @@ const CONTENT = {
   },
 
   // ------------------------------------------------------------
-  // AI絵本完成までの4STEP（概要カード）
+  // AI絵本完成までの3STEP（概要カード）
   // ------------------------------------------------------------
   stepOverview: {
-    heading: "AI絵本完成までの4STEP",
+    heading: "AI絵本完成までの3STEP",
     description: "全体の流れを先に確認しておきましょう。<br>タップすると、それぞれの詳しい説明に移動できます。",
     items: [
       { number: "STEP 1", title: "ChatGPTで<br>ストーリーを作る", icon: "📝", targetId: "step1" },
       { number: "STEP 2", title: "AIで<br>イラストを作る", icon: "🎨", targetId: "step2" },
-      { number: "STEP 3", title: "Canvaで<br>絵本に仕上げる", icon: "📖", targetId: "step3" },
-      { number: "STEP 4", title: "Amazon KDPで<br>出版する", icon: "⭐", targetId: "step4" },
+      { number: "STEP 3", title: "Canvaで仕上げて<br>Amazonで出版する", icon: "📖", targetId: "step3" },
     ],
   },
 
   // ------------------------------------------------------------
-  // STEP1〜4 詳細
+  // STEP1〜3 詳細
   // ------------------------------------------------------------
   // { } のかたまり1つが STEP1つ分です。増減も自由です。
   // prompt: コピー用プロンプトを表示したい場合だけ設定（不要な場合は null）
@@ -250,36 +248,22 @@ const CONTENT = {
       },
     },
     {
+      // 台本の「3STEP」に合わせて、Canva仕上げ〜Amazon出版までを1つのSTEPにまとめています。
       number: "STEP 3",
-      title: "Canvaで絵本に仕上げる",
-      paragraphs: ["シナリオとイラストがそろったら、Canvaでページを組み立てていきます。"],
+      title: "Canvaで仕上げてAmazonで出版する",
+      paragraphs: [
+        "シナリオとイラストがそろったら、Canvaで絵本の形に組み立てて、そのままAmazonで出版しましょう。",
+        "印刷や発送はAmazon側が対応してくれるので、在庫を抱える心配はありません。",
+      ],
       list: [],
-      // 番号付きの操作手順（check-listの✓ではなく1.2.3...で表示）
+      // 番号付きの操作手順（check-listの✓ではなく1.2.3...で表示）。前半がCanva、後半がAmazon KDP。
       numberedList: [
         "Canvaで「カスタムサイズ」を選び、出版したいサイズで新規作成する（サイズは下の注意点を確認してから決めましょう）",
         "表紙ページを作る（タイトル＋メイン挿絵）",
         "各ページに挿絵を配置し、その下にシナリオのテキストを置く",
         "最後のページに「おわり」とあたたかい一言を添える",
         "全ページが揃ったら、PDF形式（印刷用）でダウンロードする",
-      ],
-      afterParagraphs: [
-        "注意点：Amazon KDPでは、選択する判型や裁ち落としなどによって必要なサイズや仕様が変わります。<br>先にサイズを決め打ちするのではなく、「出版するサイズを先に決め、KDPの最新仕様を確認してからCanvaのサイズを設定する」という順番がおすすめです。サイズに迷ったときの参考として、正方形（21cm×21cm程度）で作る方法も一例としてあります。",
-      ],
-      prompt: null,
-      note: null,
-      // 前向きなコツ（黄色系）。数値の断定（〇pt以上なら正解 等）は避けています。
-      tip: {
-        emoji: "🌻",
-        text: "文字は丸みのある読みやすいフォントを選び、余白を広めに取ると、絵本らしいやさしい仕上がりになります。「◯pt以上なら正解」という決まりはないので、実際の見え方をプレビューで確認しながら調整しましょう。",
-      },
-      warning: null,
-    },
-    {
-      number: "STEP 4",
-      title: "Amazon KDPで出版する",
-      paragraphs: ["Canvaで絵本が完成したら、Amazon KDPを使って出版します。"],
-      list: [
-        "KDPアカウントを作成する",
+        "Amazon KDPアカウントを作成する",
         "本の情報（タイトル・紹介文など）を登録する",
         "原稿・表紙をアップロードする",
         "プレビューで仕上がりを確認する",
@@ -287,7 +271,8 @@ const CONTENT = {
         "出版申請をする",
       ],
       afterParagraphs: [
-        "注意点：審査や公開までの時間は状況によって変わります。「最短◯日で完了」と決まっているわけではないため、Amazon側の審査後、問題がなければ商品ページが公開される、という認識で待ちましょう。",
+        "注意点：Amazon KDPでは、選択する判型や裁ち落としなどによって必要なサイズや仕様が変わります。<br>先にサイズを決め打ちするのではなく、「出版するサイズを先に決め、KDPの最新仕様を確認してからCanvaのサイズを設定する」という順番がおすすめです。サイズに迷ったときの参考として、正方形（21cm×21cm程度）で作る方法も一例としてあります。",
+        "審査や公開までの時間は状況によって変わります。「最短◯日で完了」と決まっているわけではないため、Amazon側の審査後、問題がなければ商品ページが公開される、という認識で待ちましょう。",
         "カテゴリー選びについても、「このカテゴリーを選べば上位に入りやすい」といった保証はありません。読んでほしい方に届きやすいカテゴリーを、落ち着いて選んでください。",
       ],
       // Amazon KDP公式サイトへのリンク（2026年時点で確認済みの公式URL）
@@ -301,7 +286,11 @@ const CONTENT = {
       screenshots: [],
       prompt: null,
       note: null,
-      tip: null,
+      // 前向きなコツ（黄色系）。数値の断定（〇pt以上なら正解 等）は避けています。
+      tip: {
+        emoji: "🌻",
+        text: "文字は丸みのある読みやすいフォントを選び、余白を広めに取ると、絵本らしいやさしい仕上がりになります。「◯pt以上なら正解」という決まりはないので、実際の見え方をプレビューで確認しながら調整しましょう。",
+      },
       warning: null,
     },
   ],
@@ -382,9 +371,8 @@ const CONTENT = {
     items: [
       "ChatGPTでストーリーを作る",
       "画像生成AIでイラストを作る",
-      "Canvaで絵本の形に仕上げる",
-      "Amazon KDPで出版する",
-      "この4STEPを、順番に進めるだけでOK",
+      "Canvaで仕上げてAmazonで出版する",
+      "この3STEPを、順番に進めるだけでOK",
     ],
   },
 
