@@ -194,12 +194,37 @@
           ? `<div class="warning-box"><p class="warning-box__label">⚠️ ${step.warning.label}</p><p>${step.warning.text}</p></div>`
           : "";
 
+        const officialLinkHtml = step.officialLink
+          ? `
+          <div class="step__official-link">
+            <a class="btn btn--outline" href="${step.officialLink.url}" target="_blank" rel="noopener">${step.officialLink.text}</a>
+          </div>`
+          : "";
+
+        const screenshotsHtml =
+          step.screenshots && step.screenshots.length
+            ? `
+          <div class="step__screenshots">
+            ${step.screenshots
+              .map(
+                (shot) => `
+              <figure class="screenshot-card">
+                <img src="${shot.src}" alt="${escapeHtml(shot.alt || "")}" loading="lazy">
+                ${shot.caption ? `<figcaption>${shot.caption}</figcaption>` : ""}
+              </figure>`
+              )
+              .join("")}
+          </div>`
+            : "";
+
         return `
         <section class="section${softClass} step" id="${id}" aria-labelledby="${id}-heading">
           <div class="section__inner reveal">
             <p class="step__number">${step.number}</p>
             <h2 class="step__title" id="${id}-heading">${step.title}</h2>
             <div class="prose">${prose}</div>
+            ${officialLinkHtml}
+            ${screenshotsHtml}
             ${promptHtml}
             ${warningHtml}
             ${noteHtml}

@@ -287,6 +287,15 @@ const CONTENT = {
         "注意点：審査や公開までの時間は状況によって変わります。「最短◯日で完了」と決まっているわけではないため、Amazon側の審査後、問題がなければ商品ページが公開される、という認識で待ちましょう。",
         "カテゴリー選びについても、「このカテゴリーを選べば上位に入りやすい」といった保証はありません。読んでほしい方に届きやすいカテゴリーを、落ち着いて選んでください。",
       ],
+      // Amazon KDP公式サイトへのリンク（2026年時点で確認済みの公式URL）
+      officialLink: {
+        text: "Amazon KDP公式サイトはこちら",
+        url: "https://kdp.amazon.co.jp/ja_JP/",
+      },
+      // 実際の操作画面のスクリーンショットが届き次第、ここに追加します。
+      // 例: { src: "assets/images/kdp-step-1.png", alt: "KDPの本棚画面", caption: "①「新しい本を作成」をクリック" }
+      // 架空の画像は使用しません（本文はそのままで screenshots だけ追加すれば反映されます）。
+      screenshots: [],
       prompt: null,
       note: null,
       warning: null,
