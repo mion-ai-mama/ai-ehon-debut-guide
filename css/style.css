@@ -472,6 +472,45 @@ button:focus-visible {
   margin-bottom: 0;
 }
 
+.numbered-box {
+  margin: 0 0 1.4em;
+  padding: 1.5rem;
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-lg);
+  counter-reset: numbered-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9em;
+}
+
+.numbered-box li {
+  position: relative;
+  list-style: none;
+  padding-left: 1.8em;
+  counter-increment: numbered-box;
+}
+
+.numbered-box li::before {
+  content: counter(numbered-box) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-primary-dark);
+  font-weight: 800;
+}
+
+.tip-box {
+  margin-top: 1.75rem;
+  background: #fffbe8;
+  border: 1px solid #f0e6b8;
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.4rem;
+}
+
+.tip-box p {
+  margin: 0;
+}
+
 /* ============================================================
    STEP内の公式リンク・スクリーンショット
 ============================================================ */
