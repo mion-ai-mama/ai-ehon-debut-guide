@@ -127,6 +127,17 @@
     if (!root || !c) return;
     root.querySelector(".section__heading").innerHTML = c.heading;
     root.querySelector(".prose").innerHTML = (c.paragraphs || []).map((p) => `<p>${p}</p>`).join("");
+
+    const shotEl = root.querySelector(".screenshot-card");
+    if (shotEl) {
+      if (c.screenshot && c.screenshot.src) {
+        shotEl.querySelector("img").src = c.screenshot.src;
+        shotEl.querySelector("img").alt = c.screenshot.alt || "";
+        shotEl.style.display = "";
+      } else {
+        shotEl.style.display = "none";
+      }
+    }
   }
 
   /* ------------------------------------------------------------
