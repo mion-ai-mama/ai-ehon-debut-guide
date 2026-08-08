@@ -22,9 +22,8 @@ const CONTENT = {
     pageTitle: "AI絵本デビュー完全ガイド｜絵心も文才もいらない絵本づくり4STEP",
     description:
       "絵心も文才もいらない。ChatGPTと画像生成AI、Canva、Amazon KDPを使って、AI初心者さんでも絵本づくりに挑戦できる完全ガイドです。コピペで使えるプロンプト付き。",
-    // TODO: 専用のOGP画像を用意して差し替えてください（表紙デザインの画像等がおすすめです。
-    //       現在は暫定的にCTAバナー画像を流用しています）
-    ogpImage: "https://mion-ai-mama.github.io/ai-ehon-debut-guide/assets/images/cta-banner.png",
+    // 絵本『おかあさん だいすき』の表紙イラストをOGP画像として使用（正方形1000x1000）
+    ogpImage: "https://mion-ai-mama.github.io/ai-ehon-debut-guide/assets/images/book/cover.jpg",
     siteUrl: "https://mion-ai-mama.github.io/ai-ehon-debut-guide/",
     faviconPath: "assets/favicon/favicon.svg",
   },
