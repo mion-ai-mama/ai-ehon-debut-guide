@@ -638,66 +638,42 @@ button:focus-visible {
 }
 
 /* ============================================================
-   完成イメージ（絵本モックアップ）
+   完成イメージ（絵本カルーセル・横スライド表示）
 ============================================================ */
 
-.book-mock {
+.book-carousel {
   display: flex;
-  flex-direction: column;
-  gap: 1.1rem;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 -1.25rem;
+  padding: 0.25rem 1.25rem 0.75rem;
 }
 
-.book-mock__cover {
-  margin: 0;
-  text-align: center;
-}
-
-.book-mock__cover img {
-  width: 100%;
+.book-carousel__item {
+  flex: none;
+  width: min(70vw, 320px);
+  aspect-ratio: 1 / 1;
   border-radius: var(--radius-lg);
+  overflow: hidden;
   box-shadow: 0 12px 28px -18px var(--color-card-shadow);
+  scroll-snap-align: start;
 }
 
-.book-mock__title {
-  font-size: 1.3rem;
-  font-weight: 800;
-  margin: 0.9rem 0 0;
-}
-
-.book-mock__pages {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-}
-
-.book-mock__page {
-  margin: 0;
-  background: #fff;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 0.75rem;
-  box-shadow: 0 12px 28px -18px var(--color-card-shadow);
-}
-
-.book-mock__page img {
+.book-carousel__item img {
   width: 100%;
+  height: 100%;
   display: block;
-  border-radius: var(--radius-sm);
+  object-fit: cover;
 }
 
-.book-mock__page-label {
-  font-weight: 800;
-  color: var(--color-primary-dark);
-  margin: 0.75rem 0.25rem 0;
-  font-size: 0.85rem;
-  text-align: center;
-}
-
-.book-mock__note {
+.book-carousel__note {
   color: var(--color-text-muted);
   font-size: 0.85rem;
   text-align: center;
-  margin: 1.25rem 0 0;
+  margin: 0.75rem 0 0;
 }
 
 /* ============================================================
